@@ -1,0 +1,33 @@
+# /etc/conf.d/peracoind: config file for /etc/init.d/peracoind
+
+# Config file location
+#PERACOIND_CONFIGFILE="/etc/peracoin/peracoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $PERACOIND_USER)
+#PERACOIND_PIDDIR="/var/run/peracoind"
+
+# What filename to give the pidfile
+#PERACOIND_PIDFILE="${PERACOIND_PIDDIR}/peracoind.pid"
+
+# Where to write peracoind data (be mindful that the blockchain is large)
+#PERACOIND_DATADIR="/var/lib/peracoind"
+
+# User and group to own peracoind process
+#PERACOIND_USER="peracoin"
+#PERACOIND_GROUP="peracoin"
+
+# Path to peracoind executable
+#PERACOIND_BIN="/usr/bin/peracoind"
+
+# Nice value to run peracoind under
+#PERACOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+PERACOIND_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for peracoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+PERACOIND_SIGTERM_TIMEOUT=60

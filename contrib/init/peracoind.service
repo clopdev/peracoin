@@ -1,0 +1,22 @@
+[Unit]
+Description=Peracoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=peracoin
+Group=peracoin
+
+Type=forking
+PIDFile=/var/lib/peracoind/peracoind.pid
+ExecStart=/usr/bin/peracoind -daemon -pid=/var/lib/peracoind/peracoind.pid \
+-conf=/etc/peracoin/peracoin.conf -datadir=/var/lib/peracoind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

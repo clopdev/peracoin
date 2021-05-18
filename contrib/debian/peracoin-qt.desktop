@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Peracoin Core
+Comment=Connect to the Peracoin P2P Network
+Comment[de]=Verbinde mit dem Peracoin peer-to-peer Netzwerk
+Comment[fr]=Peracoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Peracoin, eşten eşe kriptografik sanal para birimi
+Exec=peracoin-qt %u
+Terminal=false
+Type=Application
+Icon=peracoin128
+MimeType=x-scheme-handler/peracoin;
+Categories=Office;Finance;
